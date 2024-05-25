@@ -57,18 +57,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname1 = path.dirname(__filename);
 
 // Reference the static files from the client build directory
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname1, "./client/dist")));
 
-  // Catch-all route to serve the index.html file
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname1, "./client/dist", "index.html"));
-  });
-} else {
-  app.get("/", (req, res) => {
-    res.send("API is running successfully");
-  });
-}
+app.use(express.static(path.join(__dirname1, "./client/dist")));
+
+// Catch-all route to serve the index.html file
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname1, "./client/dist", "index.html"));
+});
 
 // Error handling middleware
 app.use(errorMiddleware);
