@@ -1,0 +1,28 @@
+.order-success {
+  margin: auto;
+  text-align: center;
+  margin-top: 60px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-icon {
+  font-size: 7vmax;
+  color: #4bb543;
+}
+.order-success > p {
+  font-size: 2vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .success-icon {
+    font-size: 20vw;
+  }
+  .order-success > p {
+    margin: 2vmax;
+    font-size: 5vw;
+  }
+}

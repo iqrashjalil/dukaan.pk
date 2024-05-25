@@ -1,0 +1,123 @@
+.AboutUs-section {
+  background-color: #f6fafa;
+  min-height: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.AboutUs-left {
+  width: 40%;
+  background-color: #ffffff;
+  height: 60vh;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.AboutUs-left h5 {
+  color: tomato;
+  font-weight: bold;
+}
+.AboutUs-left h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #36454f;
+}
+pre {
+  overflow: hidden;
+  color: #36454f;
+  display: flex;
+  flex-wrap: wrap;
+}
+pre span {
+  color: #007bff;
+}
+.AboutUs-left p {
+  color: grey;
+}
+.AboutUs-right {
+  width: 26%;
+  height: 60vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.AboutUs-photos {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.AboutUs-photos img {
+  width: 47%;
+
+  border-radius: 20px;
+}
+
+.AboutUs-socials {
+  background-color: white;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  height: 35%;
+  border-radius: 20px;
+}
+.AboutUs-socials div {
+  display: flex;
+  gap: 20px;
+}
+.social {
+  background-color: #f0f0f0;
+  width: 50%;
+  border-radius: 20px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.facebook {
+  color: #1877f2;
+}
+
+.instagram {
+  color: red;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.github {
+  color: #2b3137;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1150px) {
+  .AboutUs-section {
+    flex-direction: column;
+  }
+  .AboutUs-left {
+    width: 80%;
+    margin-top: 100px;
+    height: 100%;
+  }
+  .AboutUs-right {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  .AboutUs-left h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #36454f;
+  }
+}

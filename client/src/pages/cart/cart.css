@@ -1,0 +1,219 @@
+:root {
+  --primary-color: #0d6efd;
+}
+
+.cart-page {
+  padding: 5vmax;
+}
+.cart-header {
+  background-color: rgb(61, 61, 247);
+  width: 90%;
+  box-sizing: border-box;
+  margin: auto;
+  color: white;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  font: 300 0.7vmax "Roboto";
+}
+
+.cart-header p {
+  margin: 10px;
+}
+
+.cart-header :last-child {
+  text-align: end;
+}
+.cart-container {
+  width: 90%;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 4fr 1fr 1fr;
+}
+
+.cart-input {
+  display: flex;
+  align-items: center;
+  height: 8vmax;
+}
+
+.cart-input button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.616);
+  cursor: pointer;
+  color: white;
+  padding: 0.5vmax;
+  transition: all 0.5s;
+}
+.cart-input button:hover {
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+.cart-input input {
+  border: none;
+  padding: 0.5vmax;
+  width: 2vmax;
+  text-align: center;
+  outline: none;
+  font: 400 0.8vmax "Roboto";
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.cart-subtotal {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5vmax;
+  font: 300 1vmax "Roboto";
+  box-sizing: border-box;
+  height: 8vmax;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.753);
+}
+.cart-grossTotal {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+}
+
+.cart-grossTotal-box {
+  border-top: 3px solid var(--primary-color);
+  margin: 1vmax 4vmax;
+  box-sizing: border-box;
+  padding: 2vmax 0;
+  font: 300 1vmax "Roboto";
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.checkout-btn button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  width: 50%;
+  padding: 0.8vmax 4vmax;
+  font: 300 0.8vmax "Roboto";
+  margin: 1vmax 4vmax;
+  cursor: pointer;
+  border-radius: 30px;
+}
+/*? Cart Item Card Designing */
+
+.CartItemCard {
+  display: flex;
+  padding: 1vmax;
+  height: 8vmax;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.CartItemCard img {
+  width: 5vmax;
+}
+
+.CartItemCard div {
+  display: flex;
+  margin: 0.3vmax 1vmax;
+  flex-direction: column;
+}
+
+.CartItemCard div a {
+  font: 300 1vmax "Roboto";
+  text-decoration: none;
+  color: rgba(24, 24, 24, 0.815);
+}
+
+.CartItemCard div span {
+  font: 300 0.9vmax "Roboto";
+  color: rgba(24, 24, 24, 0.815);
+}
+
+.CartItemCard div p {
+  color: red;
+  font: 100 0.8vmax "Roboto";
+  cursor: pointer;
+}
+.empty-cart {
+  margin: auto;
+  text-align: center;
+  padding: 10vmax;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.empty-cart svg {
+  font-size: 5vmax;
+  color: var(--primary-color);
+}
+.empty-cart p {
+  font-size: 2vmax;
+  color: grey;
+}
+/*? Cart Item Card Designing */
+@media screen and (max-width: 600px) {
+  .CartItemCard {
+    padding: 3vmax;
+    height: 25vmax;
+  }
+  .CartItemCard img {
+    width: 10vmax;
+  }
+  .CartItemCard div {
+    margin: 1vmax 2vmax;
+  }
+  .CartItemCard div a {
+    font: 300 1.5vmax "Roboto";
+  }
+
+  .CartItemCard div span {
+    font: 300 1.9vmax "Roboto";
+  }
+
+  .CartItemCard div p {
+    font: 100 1.8vmax "Roboto";
+  }
+  .cart-page {
+    padding: 0;
+    min-height: 60vh;
+  }
+  .cart-header {
+    width: 100%;
+    font: 300 1.7vmax "Roboto";
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+  .cart-container {
+    width: 100%;
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+  .cart-input {
+    height: 20vmax;
+  }
+  .cart-input button {
+    padding: 1.5vmax;
+  }
+  .cart-input input {
+    width: 5vmax;
+    font: 400 2vmax "Roboto";
+  }
+  .cart-subtotal {
+    padding: 1.5vmax;
+    height: 20vmax;
+    font: 300 2vmax "Roboto";
+  }
+  .cart-grossTotal {
+    display: grid;
+    grid-template-columns: 0fr 2fr;
+  }
+  .cart-grossTotal-box {
+    padding: 2vmax;
+    font: 300 2vmax "Roboto";
+  }
+  .checkout-btn button {
+    padding: 2vmax 4vmax;
+    width: 100%;
+    font: 300 2vmax "Roboto";
+  }
+}

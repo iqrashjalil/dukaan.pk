@@ -1,0 +1,88 @@
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 1px;
+  margin-right: 10px;
+}
+.sub-menu-wrap {
+  position: absolute;
+  top: 100%;
+  right: 2%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.sub-menu-wrap.open-menu {
+  max-height: 500px;
+}
+.sub-menu {
+  background-color: #eceaff;
+  padding: 20px;
+  margin: 10px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.user-info img {
+  width: 60px;
+  height: 60px;
+  border: 2px solid grey;
+  padding: 2px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+.user-info h3 {
+  font-weight: 500;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin: 15px 0;
+  padding: 8px;
+  border-radius: 10px;
+}
+.sub-menu-link:hover {
+  background-color: rgb(224, 224, 224);
+}
+.sub-menu-link p {
+  width: 100%;
+  margin: 0;
+}
+
+.sub-menu-link .main-icon {
+  width: 60px;
+  height: 45px;
+  margin-right: 15px;
+  color: white;
+  background-color: grey;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.sub-menu-link span {
+  transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+  font-weight: 600;
+}
