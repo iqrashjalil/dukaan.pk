@@ -38,7 +38,7 @@ const Products = () => {
 
   const [keyword, setKeyword] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([0, 1000000]);
+  const [price, setPrice] = useState([0, 100000]);
   const [category, setCategory] = useState("");
   const [ratings, setRatings] = useState(0);
   const handleCategory = (category) => {
