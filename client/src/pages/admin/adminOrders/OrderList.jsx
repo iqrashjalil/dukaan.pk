@@ -14,6 +14,7 @@ import { MdDeleteForever, MdModeEdit } from "react-icons/md";
 import { toast } from "react-toastify";
 import "../dashboard.css";
 import { DELETE_ORDER_RESET } from "../../../constants/orderConstant";
+import "./orderlist.css";
 
 const OrderList = () => {
   const dispatch = useDispatch();

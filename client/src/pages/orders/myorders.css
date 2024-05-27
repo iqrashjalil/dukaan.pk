@@ -71,9 +71,6 @@
   .my-orders-table div {
     font: 300 4vw "Roboto";
   }
-  .MuiDataGrid-columnHeader {
-    padding: 20px !important;
-  }
   .MuiDataGrid-columnHeader div {
     font: 500 5vw "Roboto" !important;
   }

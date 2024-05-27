@@ -8,7 +8,7 @@ import orderRoutes from "./routes/order-routes.js";
 import paymentRoutes from "./routes/payment-routes.js";
 import cookieParser from "cookie-parser";
 import cloudinary from "cloudinary";
-// import cors from "cors";
+import cors from "cors";
 import bodyParser from "body-parser";
 import fileUpload from "express-fileupload";
 import path from "path";
@@ -32,12 +32,12 @@ cloudinary.config({
 const app = express();
 
 // CORS options
-// const corsOptions = {
-//   origin: "http://localhost:5173",
-//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//   credentials: true,
-// };
-// app.use(cors(corsOptions));
+const corsOptions = {
+  origin: "http://localhost:5173",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+};
+app.use(cors(corsOptions));
 
 // Middleware setup
 app.use(cookieParser());

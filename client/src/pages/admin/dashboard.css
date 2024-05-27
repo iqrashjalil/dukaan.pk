@@ -82,6 +82,7 @@
   .dashboard {
     grid-template-columns: 1fr;
   }
+  
   .dashboard-container {
     border: none;
   }

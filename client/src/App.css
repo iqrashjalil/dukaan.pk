@@ -91,7 +91,7 @@ input::-webkit-inner-spin-button {
   margin-right: 10px;
 }
 .banner {
-  min-height: 100vh;
+  min-height: 94vh;
   margin-top: 56px;
   flex-direction: column;
   background-image: url("https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
@@ -525,6 +525,13 @@ input::-webkit-inner-spin-button {
   }
   .cards {
     gap: 20px;
+  }
+
+  .banner {
+    min-height: 92vh;
+  }
+  .banner-text h3 {
+    font-size: 1rem;
   }
   .text-truncate {
     width: 180px;
