@@ -50,13 +50,13 @@ const getProduct = catchAsyncError(async (req, res, next) => {
 // * Get All Product Function (User)
 
 const getAllProduct = catchAsyncError(async (req, res, next) => {
-  const resultPerPage = 1;
+  const resultPerPage = 12;
   const productsCount = await Product.countDocuments();
   const apiFeatures = new ApiFeatures(Product.find(), req.query);
   apiFeatures.search().filter().pagination(resultPerPage);
 
   const products = await apiFeatures.query;
-  const filteredProducts = products.length; 
+  const filteredProducts = products.length;
 
   res.status(200).json({
     productsCount,
