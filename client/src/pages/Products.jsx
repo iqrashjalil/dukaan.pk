@@ -133,7 +133,7 @@ const Products = () => {
                     valueLabelDisplay="auto"
                     aria-labelledby="range-slider"
                     min={0}
-                    max={1000000}
+                    max={100000}
                   />
                 </div>
                 <div className="category-select">
