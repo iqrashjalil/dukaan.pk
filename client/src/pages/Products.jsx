@@ -41,24 +41,25 @@ const Products = () => {
   const [price, setPrice] = useState([0, 100000]);
   const [category, setCategory] = useState("");
   const [ratings, setRatings] = useState(0);
+
   const handleCategory = (category) => {
     setCategory(category);
   };
+
   const priceHandler = (event, newPrice) => {
     setPrice(newPrice);
   };
 
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
+    dispatch(getProduct(keyword, page, price, category, ratings));
   };
 
   const searchSubmitHandler = (e) => {
     e.preventDefault();
-    if (keyword.trim()) {
-      navigate(`/products/${keyword}`);
-    } else {
-      navigate("/products");
-    }
+    setCurrentPage(1);
+    dispatch(getProduct(keyword, 1, price, category, ratings));
+    navigate(`/products/${keyword}`);
   };
 
   useEffect(() => {
@@ -66,10 +67,11 @@ const Products = () => {
       toast.error(error);
       dispatch(clearErrors());
     }
-
     dispatch(getProduct(keyword, currentPage, price, category, ratings));
-  }, [dispatch, error, keyword, currentPage, price, category, ratings]);
+  }, [dispatch, error, currentPage, price, category, ratings]);
+
   let count = filteredProducts;
+
   const marks = [
     {
       value: 0,
@@ -96,6 +98,7 @@ const Products = () => {
       label: "5",
     },
   ];
+
   return (
     <Fragment>
       {loading ? (
@@ -122,7 +125,6 @@ const Products = () => {
             <div className="ps-left">
               <div className="filterbox">
                 <div className="price-slider">
-                  {" "}
                   <Typography>Price</Typography>
                   <Slider
                     sx={{ width: 300 }}
@@ -154,7 +156,6 @@ const Products = () => {
                     ))}
                   </select>
                 </div>
-
                 <div className="ratings-slider">
                   <fieldset>
                     <Typography component="legend">Ratings</Typography>
@@ -185,12 +186,10 @@ const Products = () => {
                 <hr />
               </div>
               <div className="product-cards">
-                {products ? (
-                  <>
-                    {products.map((product) => (
-                      <Product key={product._id} product={product} />
-                    ))}
-                  </>
+                {products && products.length > 0 ? (
+                  products.map((product) => (
+                    <Product key={product._id} product={product} />
+                  ))
                 ) : (
                   <div className="no-product">
                     <h1>No Products Found </h1>
@@ -200,8 +199,7 @@ const Products = () => {
                   </div>
                 )}
               </div>
-
-              {resultPerPage <= count && (
+              {resultPerPage < count && (
                 <div className="pagination">
                   <Pagination
                     count={Math.ceil(productsCount / resultPerPage)}
