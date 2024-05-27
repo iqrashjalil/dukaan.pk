@@ -14,14 +14,14 @@ import { Typography } from "@mui/material";
 const categories = [
   "Electronics",
   "Fashion",
-  "Home & Kitchen",
-  "Beauty & Personal Care",
-  "Sports & Outdoors",
-  "Books & Media",
-  "Toys & Games",
-  "Health & Wellness",
+  "Kitchen",
+  "Beauty",
+  "Sports",
+  "Books",
+  "Toys",
+  "Health",
   "Automotive",
-  "Grocery & Gourmet Foods",
+  "Grocery",
 ];
 
 const Products = () => {

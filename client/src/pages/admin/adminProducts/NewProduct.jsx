@@ -24,16 +24,15 @@ const NewProduct = () => {
   const categories = [
     "Electronics",
     "Fashion",
-    "Home & Kitchen",
-    "Beauty & Personal Care",
-    "Sports & Outdoors",
-    "Books & Media",
-    "Toys & Games",
-    "Health & Wellness",
+    "Kitchen",
+    "Beauty",
+    "Sports",
+    "Books",
+    "Toys",
+    "Health",
     "Automotive",
-    "Grocery & Gourmet Foods",
+    "Grocery",
   ];
-
   useEffect(() => {
     if (error) {
       toast.error(error);
