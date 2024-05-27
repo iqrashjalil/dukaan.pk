@@ -1,0 +1,5 @@
+@media screen and (min-width: 360px) and (max-width: 400px) {
+  .responsive {
+    padding-right: 0;
+  }
+}

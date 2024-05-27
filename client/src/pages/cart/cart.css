@@ -96,7 +96,7 @@
   font: 300 0.8vmax "Roboto";
   margin: 1vmax 4vmax;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 0.375rem;
 }
 /*? Cart Item Card Designing */
 

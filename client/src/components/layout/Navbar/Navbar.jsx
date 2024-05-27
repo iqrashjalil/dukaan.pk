@@ -1,26 +1,38 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { LuShoppingCart } from "react-icons/lu";
-import { CgProfile } from "react-icons/cg";
-import logo3 from "../../../images/logo3.png";
 import { useSelector } from "react-redux";
 import ProfileDD from "./ProfileDD";
+import logo3 from "../../../images/logo3.png";
+import "./navbar.css";
+
 export const Navbar = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { isAuthenticated, user } = useSelector((state) => state.user);
+
+  // Function to handle link click and close the navbar
+  const handleLinkClick = () => {
+    const navbarCollapse = document.getElementById("navbarSupportedContent");
+    if (navbarCollapse.classList.contains("show")) {
+      navbarCollapse.classList.remove("show");
+    }
+  };
+
   return (
     <>
       <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <img className="navbar-logo" to={"/"} src={logo3} alt="" />
+        <div className="container-fluid responsive">
+          <NavLink to="/">
+            <img className="navbar-logo" src={logo3} alt="Logo" />
+          </NavLink>
           <div className="d-flex settings-short align-items-center">
             <div className="icons">
-              <NavLink to={"/cart"}>
+              <NavLink to="/cart">
                 <button
                   type="button"
                   className="btn btn-primary position-relative rounded-circle"
                 >
-                  <LuShoppingCart className="shoppingcart-mobile " />
+                  <LuShoppingCart className="shoppingcart-mobile" />
                   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {cartItems.length}
                     <span className="visually-hidden">unread messages</span>
@@ -46,57 +58,56 @@ export const Navbar = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
           </div>
-          <div
-            className="collapse navbar-collapse "
-            id="navbarSupportedContent"
-          >
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
               <li className="nav-item">
                 <NavLink
-                  to={"/"}
+                  to="/"
                   className="nav-link active"
                   aria-current="page"
+                  onClick={handleLinkClick}
                 >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
-                  to={"/products"}
+                  to="/products"
                   className="nav-link active"
                   aria-current="page"
+                  onClick={handleLinkClick}
                 >
                   Product
                 </NavLink>
               </li>
-
               <li className="nav-item">
                 <NavLink
-                  to={"/contact"}
+                  to="/contact"
                   className="nav-link active"
                   aria-current="page"
+                  onClick={handleLinkClick}
                 >
                   Contact
                 </NavLink>
               </li>
-
               <li className="nav-item">
                 <NavLink
-                  to={"/about"}
+                  to="/about"
                   className="nav-link active"
                   aria-current="page"
+                  onClick={handleLinkClick}
                 >
                   About
                 </NavLink>
               </li>
             </ul>
             <div className="d-flex settings-full px-2 align-items-center">
-              <NavLink to={"/cart"}>
+              <NavLink to="/cart">
                 <button
                   type="button"
                   className="btn btn-primary position-relative rounded-circle"
                 >
-                  <LuShoppingCart className="shoppingcart-mobile " />
+                  <LuShoppingCart className="shoppingcart-mobile" />
                   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {cartItems.length}
                   </span>
@@ -106,7 +117,7 @@ export const Navbar = () => {
             {user && isAuthenticated ? (
               <ProfileDD />
             ) : (
-              <NavLink to={"/login"} className="btn btn-primary">
+              <NavLink to="/login" className="btn btn-primary">
                 Signin
               </NavLink>
             )}

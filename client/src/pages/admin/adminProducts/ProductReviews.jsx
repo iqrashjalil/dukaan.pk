@@ -143,7 +143,11 @@ const ProductReviews = () => {
               className="product-list-table"
             />
           ) : (
-            <h1>No Reviews Found</h1>
+            <div>
+              <h1 className="d-flex justify-content-center">
+                No Reviews Found
+              </h1>
+            </div>
           )}
         </div>
       </section>

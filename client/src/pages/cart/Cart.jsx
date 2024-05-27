@@ -96,7 +96,7 @@ const Cart = () => {
                 )}`}</p>
               </div>
               <div></div>
-              <div className="checkout-btn">
+              <div className=" checkout-btn">
                 <button onClick={checkoutHandler}>Check Out</button>
               </div>
             </div>

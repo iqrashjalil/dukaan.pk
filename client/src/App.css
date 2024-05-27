@@ -478,6 +478,7 @@ input::-webkit-inner-spin-button {
   .product-details {
     flex-direction: row;
     padding: 1rem;
+    margin-top: 100px;
   }
   .details-left {
     width: 100%;
@@ -525,6 +526,9 @@ input::-webkit-inner-spin-button {
   }
   .cards {
     gap: 20px;
+  }
+  .cart-page {
+    margin-top: 100px;
   }
 
   .banner {
