@@ -1,3 +1,3 @@
-const serverUrl = "https://dukaan-pk-g17y.onrender.com";
+const serverUrl = "https://dukaan-pk.vercel.app";
 
 export default serverUrl;
