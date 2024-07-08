@@ -38,7 +38,6 @@ const Home = () => {
         <Fragment>
           <div class="alert alert-primary" role="alert">
             <h4 class="alert-heading">Information!</h4>
-
             <hr />
 
             <p class="mb-0">
